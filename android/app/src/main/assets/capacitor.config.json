@@ -1,0 +1,6 @@
+{
+	"appId": "com.ots.hitman",
+	"appName": "HIT-MAN",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

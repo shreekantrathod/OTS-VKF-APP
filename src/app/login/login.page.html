@@ -1,0 +1,64 @@
+<ion-content>
+  <div class="myClass">
+  <div>
+  <div align="center">
+  <img
+  src="../../../assets/Siri Images/VKF3.png"
+  class="image1"
+  /><br />
+  </div>
+    
+    
+  <ion-title class="center-text">
+  Distributor Login
+  </ion-title>
+    
+  <form [formGroup]="signInForm" novalidate>
+  <div class="signIn">
+  <ion-label position="floating" class="labelstyle"
+  >Enter Your Registered Phone Number :</ion-label>
+  <ion-item lines="none" class="inputfieldstyle">
+  <ion-input type="text" placeholder="Enter Phone Number" formControlName="phoneNumber" required></ion-input>
+</ion-item>
+<span class="error ion-padding" *ngIf="isSubmitted && errorControl.phoneNumber.errors?.required">
+Phone Number number is required.
+</span>
+<br />
+</div>
+<div class="signIn">
+  <ion-label position="floating" class="labelstyle"
+  >Enter Password :</ion-label
+  >
+  <ion-item lines="none" class="inputfieldstyle">
+  <ion-input
+  type="text"
+  placeholder="Enter Pasword"
+  formControlName="password"
+  required
+  ></ion-input>
+  </ion-item>
+  <span
+  class="error ion-padding"
+  *ngIf="isSubmitted && errorControl.password.errors?.required"
+  >
+  Password is required.
+  </span>
+    </div>
+<div align="center">
+<ion-row>
+<ion-col>
+<ion-button expand="block" class="main-button col-8" (click)="signIn()"> Verify</ion-button>
+</ion-col>
+</ion-row>
+<br />
+</div>
+</form>
+</div>
+
+<div>
+<div align="center">
+<img src="../../../assets/Siri Images/VKF3.png" class="image2"><br />
+</div>
+</div>
+</div>
+</ion-content>

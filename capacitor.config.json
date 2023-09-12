@@ -1,0 +1,6 @@
+{
+	"appId": "com.ots.vkf",
+	"appName": "VKF-App",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

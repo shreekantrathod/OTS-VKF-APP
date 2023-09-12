@@ -1,0 +1,181 @@
+/* Reset background and box shadow for ion-tab-button */
+ion-tab-button {
+  --background: transparent !important;
+  --box-shadow: none !important;
+}
+
+/* Reset background for img elements */
+.image-icon, .power, .profile, .data-transfer, .home, .cancelled, .closed {
+  background: none !important;
+}
+
+/* Your other styles can remain as they are */
+.myClass {
+  background-color: #f5f6f9;
+  height: 100%;
+  width: 100%;
+}
+
+ion-tab-bar,
+ion-tab-button {
+  background-color: #d9d8da;
+}
+
+ion-icon {
+  color: #0c0c0c;
+}
+
+ion-label {
+  color: #0c0c0c;
+}
+
+.header {
+  margin-top: 30px;
+  font-weight: 900;
+  color: rgb(18, 18, 125);
+  text-align: center;
+  background-color: #f5f6f9;
+}
+
+
+
+.tab {
+  --background: rgb(18, 18, 125);
+  margin-left: 4rem !important;
+  color: white;
+  font-weight: 900;
+  width:10rem;
+}
+
+.power{
+  width: 40px;
+  height: 40px;
+}
+
+.data-transfer{
+  width: 28px;
+  height: 28px;
+}
+.home{
+  width: 24px;
+  height: 24px;
+}
+.cancelled{
+  width: 40px;
+  height: 36px;
+}
+.closed{
+  width: 36px;
+  height: 36px;
+}
+.image-icon{
+  width: 80px;
+  height: 45px;
+}
+
+.profile{
+  width: 24px;
+  height: 24px;
+}
+
+.title1 {
+  color: rgb(18, 18, 125);
+  font-weight: 550;
+}
+.search-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search {
+  width: 15rem;
+  position: relative; /* Create a positioning context for pseudo-element */
+}
+
+.search ion-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px; 
+  transform: translateY(-50%);
+  font-size: 1.2rem; 
+  color: #333;
+}
+
+.search::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 30px; 
+  height: 30px; 
+  background-color: #ccc;
+  border-radius: 50%;
+  z-index: -1;
+}
+.title{
+  color:rgb(255, 115, 0);
+  font-weight: 700;
+}
+.day{
+  text-transform:none;
+  color:black;
+}
+.toggle{
+  color: rgb(18, 18, 125);
+}
+.status{
+  color: rgb(18, 18, 125);
+}
+.card{
+  background-color: white;
+  color:#0c0c0c;
+}
+.button-container {
+  display: flex; 
+
+}
+
+.tab {
+  width:13rem; 
+  height: 1.5rem;
+  
+}
+.tab1 {
+  width:13rem; 
+  height: 1.5rem;
+  margin-left: -30px;
+}
+
+.search {
+  --border-radius: 20px; 
+  --border-color: #ccc; 
+  --border-width: 1px; 
+  --background: #fff; 
+  --placeholder-color: #999; 
+}
+
+/* Define CSS for the label and value */
+.details {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px; /* Optional: Add spacing between details */
+}
+
+.label {
+  font-weight: bold;
+  margin-right: 10px; /* Optional: Add spacing between label and value */
+}
+
+.value {
+  flex-grow: 1; /* Allow the value to grow and take available space */
+}
+
+
+
+

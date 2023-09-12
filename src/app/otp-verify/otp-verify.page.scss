@@ -1,0 +1,159 @@
+.myClass{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+
+    background-color:#f5f6f9;
+    height: 100%;
+    width: 100%;
+
+}
+
+.myClass > div {
+    margin: 0;
+    padding: 0;
+  }
+
+
+.otpclass,
+.labelclass {
+margin-top: 10px;
+}
+
+.image1,
+.image2 {
+  margin: 0;
+  padding: 0;
+}
+
+.signIn{
+    font-weight: 900;
+    color:rgb(255, 115, 0);
+}
+
+.center-text{
+    margin-top: 30px; 
+    font-weight: 900;
+    color:rgb(18, 18, 125);
+    text-align: center;  
+}
+
+.labelstyle{
+    // color: black;
+    margin-left: 5%;
+    font-size: medium;
+}
+.inputfieldstyle{
+    border: 2px solid ;
+    border-radius: 40px;
+    width: 95%;
+    margin-left: 2%;
+    margin-top: 3%;
+
+}
+ion-button {
+    text-transform: none;
+    --border-radius: 30px;
+    --background: rgb(18, 18, 125);
+     margin-top: 10%;
+     color: white;
+     font-weight: 900;
+}
+.strike {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap; 
+    margin-top: 10%;
+}
+
+.strike > span {
+    position: relative;
+    display: inline-block;
+}
+
+.strike > span:before,
+.strike > span:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 9999px;
+    height: 1px;
+    background: #C4C4C4;
+}
+
+.strike > span:before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+.strike > span:after {
+    left: 100%;
+    margin-left: 15px;
+   
+}
+
+.slignlogos{
+    margin-top: 0rem !important;
+    margin-left: 2rem !important;
+    margin-bottom: 2rem !important;
+}
+.image1{
+    width: 100%;
+}
+.signIn{
+    margin-top: 10%;
+}
+.image1 {
+    // border: 1px solid #ddd;
+    // border-radius: 4px;
+    // padding: 10px;
+    width: 250px;
+  }
+
+  .image2 {
+    // border: 1px solid #ddd;
+    // border-radius: 4px;
+    // padding: 10px;
+    width: 250px;
+    opacity: 0.5;
+  }
+  
+  .title {
+    text-align: center;
+    color:black;
+    text-decoration: solid;
+    
+}
+
+.otpmsg{
+    text-align: center; 
+    margin-top: 20px; 
+}
+
+.enterotp{
+    font-weight: 900;
+    color:rgb(255, 115, 0);
+    text-align: left;
+    margin-top: 40px;
+    margin-left: 0;
+}
+
+.otpclass{
+    margin-top: 100 px;
+    text-align: center;
+    
+  }
+
+.labelclass{
+   margin-top: 100;
+   margin-bottom: 5px; 
+    text-align: right;
+    margin-right: 0;
+  }
+
+  
+  .main-button {
+    margin-top: 5px; 
+  }

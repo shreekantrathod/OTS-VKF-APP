@@ -1,0 +1,109 @@
+.myClass{
+    background-color:#f5f6f9;
+    height: 100%;
+    width: 100%;
+
+}
+
+.signIn{
+    font-weight: 900;
+    color:rgb(255, 115, 0);
+}
+
+.center-text{
+    margin-top: 30px; 
+    font-weight: 900;
+    color:rgb(18, 18, 125);
+    text-align: center;  
+}
+
+.labelstyle{
+    // color: black;
+    margin-left: 5%;
+    font-size: medium;
+}
+.inputfieldstyle{
+    border: 2px solid ;
+    border-radius: 40px;
+    width: 95%;
+    margin-left: 2%;
+    margin-top: 3%;
+
+}
+ion-button {
+    text-transform: none;
+    --border-radius: 30px;
+    --background: rgb(18, 18, 125);
+     margin-top: 10%;
+     color: white;
+     font-weight: 900;
+}
+.strike {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap; 
+    margin-top: 10%;
+}
+
+.strike > span {
+    position: relative;
+    display: inline-block;
+}
+
+.strike > span:before,
+.strike > span:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 9999px;
+    height: 1px;
+    background: #C4C4C4;
+}
+
+.strike > span:before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+.strike > span:after {
+    left: 100%;
+    margin-left: 15px;
+   
+}
+
+.slignlogos{
+    margin-top: 0rem !important;
+    margin-left: 2rem !important;
+    margin-bottom: 2rem !important;
+}
+.image1{
+    width: 100%;
+}
+.signIn{
+    margin-top: 5%;
+}
+.image1 {
+    // border: 1px solid #ddd;
+    // border-radius: 4px;
+    // padding: 10px;
+    width: 250px;
+  }
+
+  .image2 {
+    // border: 1px solid #ddd;
+    // border-radius: 4px;
+    // padding: 10px;
+    width: 250px;
+    opacity: 0.5;
+  }
+  
+  .title {
+    text-align: center;
+    color:black;
+    text-decoration: solid;
+    
+}
+.main-button {
+margin-top: 5px; 
+}

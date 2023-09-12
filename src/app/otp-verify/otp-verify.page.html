@@ -1,0 +1,53 @@
+<ion-content>
+  <div class="myClass">
+    <div>
+    <div align="center">
+    <img
+    src="../../../assets/Siri Images/VKF3.png"
+    class="image1"
+    /><br />
+    </div>
+    <ion-title class="center-text">
+    OTP Verification
+      </ion-title>
+    
+      <div class="otpmsg">
+      <ion-label>
+      OTP Sent To Your Phone Number
+      </ion-label>
+    </div>
+    
+    <div class="enterotp">
+      <ion-label>
+    Enter OTP :
+      </ion-label>
+    </div>
+    <div class="otpclass">
+    <ng-otp-input style="background-color: #ffff;" type="tel" class="otp" #ngOtpInput (onInputChange)="onOtpChange($event)" [config]="{length:6}"></ng-otp-input>
+    <span *ngIf="otp" class="o-t-p">Entered otp :-{{otp}}</span>
+   
+  </div>
+  
+  <div class="labelclass">
+    <ion-label>
+    Didn't Received OTP? <a [routerLink]="['/home']" (click)="initAuthWithPhoneNumber()" >Resend OTP</a>
+    </ion-label>
+  </div>
+  <div align="center">
+  <ion-row>
+    <ion-col>
+    <ion-button expand="block" class="main-button col-8" (click)="verifyLoginCode()">
+      Verify
+    </ion-button>
+    </ion-col>
+    </ion-row>
+  </div>
+  </div>  
+  <div align="center">
+  <img
+  src="../../../assets/Siri Images/VKF3.png"
+  class="image2"
+  /><br />
+  </div>
+  </div>
+  </ion-content>
