@@ -21,8 +21,8 @@ const routes: Routes = [
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
   {
-    path: 'profile',
-    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
+    path: 'cancelled-order',
+    loadChildren: () => import('./cancelled-orders/cancelled-orders.module').then( m => m.CancelledOrdersPageModule)
   },
   {
     path: 'accept-order',

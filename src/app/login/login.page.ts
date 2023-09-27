@@ -18,7 +18,7 @@ export class LoginPage implements OnInit {
   windowRef: any;
   phoneNumber: any;
   password:any;
- distId:any;
+  distId:any;
   constructor(
     private router: Router,
     public formBuilder: FormBuilder,
@@ -78,11 +78,12 @@ export class LoginPage implements OnInit {
        // alert(JSON.stringify(response))
         this.loaderRunning = false;
       //  this.acceptOrder=JSON.parse(JSON.stringify(response)).responseData;
-       this.distId=JSON.parse(JSON.stringify(response)).responseData['userDetails'];
-        
-      // alert(JSON.parse(JSON.stringify(this.distId)));
+       this.distId=JSON.parse(JSON.stringify(response)).responseData.userDetails.userId;
+        localStorage.setItem("distId",this.distId);
+     // alert(JSON.stringify(this.distId));
           if (JSON.parse(JSON.stringify(response)).responseCode == 200) {
             console.log("Logged in Successfully");
+            
             this.navCtrl.navigateRoot(['./tabs/home']);
             
           } else {

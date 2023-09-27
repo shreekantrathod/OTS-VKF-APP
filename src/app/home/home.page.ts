@@ -17,7 +17,7 @@ interface NewOrder {
 })
 
 export class HomePage {
-  distributorId:any;
+  distributorId:string;
   newOrder:any;
   date:any;
   loaderRunning = false;
@@ -26,13 +26,15 @@ export class HomePage {
   constructor(public navCtrl: NavController, private activatedRoute: ActivatedRoute,private router: Router,public atrCtrl: AlertController, private orderSerive: OrdersService ,private toastr: ToastrService,
     public menu: MenuController,  public alertController: AlertController,
     public loadingController: LoadingController,){
+this.distributorId=localStorage.getItem("distId");
+//alert(this.distributorId);
       this.newOrderDetails();
     }
 
     async newOrderDetails() {
       var jsonData2 = {
         "request": {
-            "distrubitorId": "73",
+            "distrubitorId": this.distributorId,
             "status": "New"
           }
         }

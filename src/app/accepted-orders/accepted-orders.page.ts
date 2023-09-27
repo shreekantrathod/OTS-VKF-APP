@@ -23,6 +23,7 @@ export class AcceptedOrdersPage implements OnInit {
   constructor(public navCtrl: NavController, private activatedRoute: ActivatedRoute,private router: Router,public atrCtrl: AlertController, private orderSerive: OrdersService ,private toastr: ToastrService,
     public menu: MenuController, 
     public loadingController: LoadingController,){
+      this.distributorId=localStorage.getItem("distId");
       this.acceptOrderDetails();
     }
 
@@ -32,7 +33,7 @@ export class AcceptedOrdersPage implements OnInit {
   async acceptOrderDetails() {
     var jsonData2 = {
       "request": {
-          "distrubitorId": "73",
+          "distrubitorId": this.distributorId,
           "status": "Assigned"
         }
       }
