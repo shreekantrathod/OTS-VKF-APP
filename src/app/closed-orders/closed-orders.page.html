@@ -19,30 +19,48 @@
   <ion-searchbar placeholder="Search" class="search"></ion-searchbar>
   </div>
   </div>
-  
-  <ion-card class="card" *ngFor="let cl of closedOrder let i = index">
-  <ion-card-content >
-      <ion-card-subtitle>12/07/2023</ion-card-subtitle>
-      <div class="details">
-          <div class="detail">
-              <span class="label">Order ID:</span>
-              <span class="value">{{cl.otsOrderId}}</span>
-          </div>
-          <div class="detail">
-              <span class="label">Product:</span>
-              <span class="value">{{cl.productName}}</span>
-          </div>
-          <div class="detail">
-              <span class="label">Quantity Ordered:</span>
-              <span class="value">{{cl.otsOrderedQty}}</span>
-          </div>
-          <div class="detail">
-              <span class="label">Delivered Date:</span>
-              <span class="value">23-06-2023</span>
-          </div>
-      </div>
-  </ion-card-content>
-</ion-card>
+  <ion-segment color="primary" [(ngModel)]="type" (ionChange)="segmentChanged($event)" scrollable>
+    <ion-segment-button value="newclose" checked>
+      <ion-label>Order</ion-label>
+     
+    </ion-segment-button>
+    <ion-segment-button value="rrclose">
+      <ion-label>RR Order</ion-label>
+     
+    </ion-segment-button>
+  </ion-segment>
+  <div [ngSwitch]="type">
+    <ion-list *ngSwitchCase="'newclose'">
+        <ion-card class="card" *ngFor="let cl of closedOrder let i = index">
+            <ion-card-content >
+                <ion-card-subtitle>12/07/2023</ion-card-subtitle>
+                <div class="details">
+                    <div class="detail">
+                        <span class="label">Order ID:</span>
+                        <span class="value">{{cl.otsOrderId}}</span>
+                    </div>
+                    <div class="detail">
+                        <span class="label">Product:</span>
+                        <span class="value">{{cl.productName}}</span>
+                    </div>
+                    <div class="detail">
+                        <span class="label">Quantity Ordered:</span>
+                        <span class="value">{{cl.otsOrderedQty}}</span>
+                    </div>
+                    <div class="detail">
+                        <span class="label">Delivered Date:</span>
+                        <span class="value">23-06-2023</span>
+                    </div>
+                </div>
+            </ion-card-content>
+          </ion-card>
+        </ion-list>
+        <div [ngSwitch]="type">
+            <ion-list *ngSwitchCase="'rrclose'">
+                </ion-list>
+                </div>
+                </div>
+ 
   
   
 

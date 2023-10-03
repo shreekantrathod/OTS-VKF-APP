@@ -20,7 +20,10 @@ export class OrdersService {
     let API_URL = `${this.apiUrl}order/getOrderByDistributorIdAndSubOrderStatus`;
     return this.httpClient.post(API_URL, request).pipe(catchError(this.error));
   }
-  
+  getNewRROrder(request: any) {
+    let API_URL = `${this.apiUrl}order/getReturnReplacementOrdersForDistributor?distributorId=`;
+    return this.httpClient.get(API_URL, request).pipe(catchError(this.error));
+  }
   error(error: HttpErrorResponse) {
     let errorMessage = '';
     if (error.error instanceof ErrorEvent) {

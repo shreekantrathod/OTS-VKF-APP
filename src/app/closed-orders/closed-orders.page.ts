@@ -6,7 +6,8 @@ import { OrdersService } from '../services/orders.service';
 interface ClosedOrder {  
   otsOrderedQty:any;
   productName: String;
-  otsOrderId: any;  
+  otsOrderId: any; 
+   
 } 
 
 @Component({
@@ -18,12 +19,15 @@ export class ClosedOrdersPage implements OnInit {
   distributorId:any;
   closedOrder:any;
   date:any;
+  type:any;
   loaderRunning = false;
   closedOrders: ClosedOrder[]; 
   constructor(public navCtrl: NavController, private activatedRoute: ActivatedRoute,private router: Router,public atrCtrl: AlertController, private orderSerive: OrdersService ,private toastr: ToastrService,
     public menu: MenuController, 
     public loadingController: LoadingController,){
+      this.type="newclose";
       this.distributorId=localStorage.getItem("distId");
+     
       this.closedOrderDetails();
     }
 
@@ -55,5 +59,9 @@ this.orderSerive.getNewOrder(jsonData2).subscribe(response => {
     this.toastr.error('Error occured recieving details, please try again later');
       console.log(error);
     })
+  }
+  segmentChanged(ev: any) {
+    console.log('Segment changed', ev);
+   
   }
 }

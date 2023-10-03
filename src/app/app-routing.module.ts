@@ -24,14 +24,17 @@ const routes: Routes = [
     path: 'cancelled-order',
     loadChildren: () => import('./cancelled-orders/cancelled-orders.module').then( m => m.CancelledOrdersPageModule)
   },
+  
   {
-    path: 'accept-order',
-    loadChildren: () => import('./accept-order/accept-order.module').then( m => m.AcceptOrderPageModule)
+    path: 'transfered-order',
+    loadChildren: () => import('./transfered-order/transfered-order.module').then( m => m.TransferedOrderPageModule)
   },
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  }
+  },
+ 
+
   
 
 

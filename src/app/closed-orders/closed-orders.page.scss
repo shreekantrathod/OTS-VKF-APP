@@ -195,4 +195,11 @@ ion-tab-button {
 ion-toolbar[slot="start"] ion-buttons {
   height: 28px !important; /* Adjust the height to your desired value */
 }
+::part(indicator-background) {
+  background-color: #fafbfd;
+}
+
+.segment-button-checked ::ng-deep{
+  background-color: #bfdffa;
+}
 

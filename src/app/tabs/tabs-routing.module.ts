@@ -20,8 +20,8 @@ const routes: Routes = [
         loadChildren: () => import('../closed-orders/closed-orders.module').then(m => m.ClosedOrdersPageModule)
       },
       {
-        path: 'profile',
-        loadChildren: () => import('../profile/profile.module').then(m => m.ProfilePageModule)
+        path: 'transfered-order',
+        loadChildren: () => import('../transfered-order/transfered-order.module').then(m => m.TransferedOrderPageModule)
       },
       {
         path: '',

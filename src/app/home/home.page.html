@@ -5,15 +5,15 @@
 <ion-buttons slot="start">
 <ion-button class="image-icon"> <img src="../../../assets/Siri Images/VKF3.png" class="image-icon" /></ion-button>
 </ion-buttons>
-<ion-title class="title1">Notifications</ion-title>
+<ion-title class="title">New Orders</ion-title>
 <ion-buttons slot="end">
-<ion-button><img src="../../../assets/Siri Images/Powerrb2.png" class="power" /></ion-button>
+<!--<ion-button><img src="../../../assets/Siri Images/Powerrb2.png" class="power" /></ion-button>-->
 </ion-buttons>
 </ion-toolbar>
   
 <div>
 <button class = "button icon ion-navicon"></button>
-<h7 class = "title">New Orders</h7>
+
 
 <div class="search-container">
 <ion-searchbar placeholder="Search" class="search"></ion-searchbar>
@@ -30,33 +30,74 @@
 </ion-buttons>
 </ion-toolbar>
 
-<ion-card class="card" *ngFor="let n of newOrder let i = index ">
-  <ion-card-content>
-      <ion-card-subtitle>{{n.orderDetails.orderDate}}</ion-card-subtitle>
-      <div class="details">
-          <div class="detail">
-              <span class="label">Order ID:</span>
-              <span class="value">{{n.otsOrderId}}</span>
-          </div>
-          <div class="detail">
-              <span class="label">Product:</span>
-              <span class="value">{{n.productName}}</span>
-          </div>
-          <div class="detail">
-              <span class="label">Quantity Ordered:</span>
-  <span class="value"> {{n.otsOrderedQty}} </span>
-          </div>
-      </div>
-      <div class="button-container">
-        <ion-button shape="round" class="tab" (click)="assignee()">ASSIGN</ion-button>
-        <ion-button shape="round" class="tab">CANCEL</ion-button>
-      </div>
-  </ion-card-content>
-</ion-card>
 
+<ion-segment color="primary" [(ngModel)]="type" (ionChange)="segmentChanged($event)" scrollable>
+    <ion-segment-button value="order" checked>
+      <ion-label>New Order</ion-label>
+     
+    </ion-segment-button>
+    <ion-segment-button value="rrorder">
+      <ion-label>RR Order</ion-label>
+     
+    </ion-segment-button>
+  </ion-segment>
+
+<div [ngSwitch]="type">
+    <ion-list *ngSwitchCase="'order'">
+        <ion-card class="card" *ngFor="let n of newOrder let i = index ">
+            <ion-card-content>
+                <ion-card-subtitle>{{n.orderDetails.orderDate}}</ion-card-subtitle>
+                <div class="details">
+                    <div class="detail">
+                        <span class="label">Order ID:</span>
+                        <span class="value">{{n.otsOrderId}}</span>
+                    </div>
+                    <div class="detail">
+                        <span class="label">Product:</span>
+                        <span class="value">{{n.productName}}</span>
+                    </div>
+                    <div class="detail">
+                        <span class="label">Quantity Ordered:</span>
+            <span class="value"> {{n.otsOrderedQty}} </span>
+                    </div>
+                </div>
+                <div class="button-container">
+                  <ion-button shape="round" class="tab" (click)="assignee()">ASSIGN</ion-button>
+                  <ion-button shape="round" class="tab" (click)="cancleAlert()">CANCEL</ion-button>
+                </div>
+            </ion-card-content>
+          </ion-card>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'rrorder'">
+        <ion-card class="card" *ngFor="let n of newOrder let i = index ">
+            <ion-card-content>
+                <ion-card-subtitle>{{n.orderDetails.orderDate}}</ion-card-subtitle>
+                <div class="details">
+                    <div class="detail">
+                        <span class="label">Order ID:</span>
+                        <span class="value">{{n.otsOrderId}}</span>
+                    </div>
+                    <div class="detail">
+                        <span class="label">Product:</span>
+                        <span class="value">{{n.productName}}</span>
+                    </div>
+                    <div class="detail">
+                        <span class="label">Quantity Ordered:</span>
+            <span class="value"> {{n.otsOrderedQty}} </span>
+                    </div>
+                </div>
+                <div class="button-container">
+                  <ion-button shape="round" class="tab" (click)="assignee()">ASSIGN</ion-button>
+                  <ion-button shape="round" class="tab" (click)="cancleAlert()">CANCEL</ion-button>
+                </div>
+            </ion-card-content>
+          </ion-card>
+    </ion-list>
+  </div>
+
+ </div>
 
  
 
-  
-</div>
 </ion-content>
