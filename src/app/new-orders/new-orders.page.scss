@@ -136,10 +136,7 @@ ion-label {
 
 }
 
-.tab {
-  width:13rem; 
-  height: 1.5rem;
-}
+
 
 
 .search {
@@ -171,6 +168,28 @@ ion-label {
   flex-grow: 1; /* Allow the value to grow and take available space */
 }
 
+.tab {
+  --background: rgb(18, 18, 125);
+  margin-left: 4rem !important;
+  color: white;
+  font-weight: 500;
+  width:10rem;
+}
 
+.custom-button {
+  width: 35px;
+  height: 35px;
+   border: 4px solid rgb(18, 18, 125);/* Adjust the border thickness as needed */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 4rem !important;
+}
+
+.power-icon {
+  color: rgb(18, 18, 125);
+  font-size: 1.2rem; /* Adjust the icon size as needed */
+}
 
 

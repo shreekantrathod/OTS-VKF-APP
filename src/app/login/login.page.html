@@ -3,7 +3,7 @@
   <div>
   <div align="center">
   <img
-  src="../../../assets/Siri Images/VKF3.png"
+  src="../../../assets/Siri Images/distributor1.png"
   class="image1"
   /><br />
   </div>
@@ -14,40 +14,39 @@
   </ion-title>
     
   <form [formGroup]="signInForm" novalidate>
-  <div class="signIn">
-  <ion-label position="floating" class="labelstyle"
-  >Enter Your Registered Phone Number :</ion-label>
-  <ion-item lines="none" class="inputfieldstyle">
-  <ion-input type="text" placeholder="Enter Phone Number" formControlName="phoneNumber" required></ion-input>
-</ion-item>
-<span class="error ion-padding" *ngIf="isSubmitted && errorControl.phoneNumber.errors?.required">
-Phone Number number is required.
-</span>
-<br />
-</div>
-<div class="signIn">
-  <ion-label position="floating" class="labelstyle"
-  >Enter Password :</ion-label
-  >
-  <ion-item lines="none" class="inputfieldstyle">
-  <ion-input
-  type="text"
-  placeholder="Enter Pasword"
-  formControlName="password"
-  required
-  ></ion-input>
-  </ion-item>
-  <span
-  class="error ion-padding"
-  *ngIf="isSubmitted && errorControl.password.errors?.required"
-  >
-  Password is required.
-  </span>
+    <div class="signIn">
+      <ion-label position="floating" class="labelstyle">Enter Your Registered Phone Number :</ion-label>
+      <ion-item lines="none" class="inputfieldstyle">
+        <ion-input type="text" placeholder="Enter Phone Number" formControlName="phoneNumber" required></ion-input>
+      </ion-item>
+      <span class="error ion-padding" *ngIf="isSubmitted && errorControl.phoneNumber.errors?.required">
+        <span class="required-asterisk">*</span> <span class="error-text">Phone Number is required.</span>
+      </span>
+      <br />
     </div>
+    
+    <div class="signIn">
+      <ion-label position="floating" class="labelstyle">Enter Password :</ion-label>
+      <ion-item lines="none" class="inputfieldstyle">
+        <ion-input
+          type="password"
+          placeholder="Enter Password"
+          formControlName="password"
+          required
+        ></ion-input>
+        <button nbSuffix nbInput nbButton ghost (click)="toggleShowPassword()" style="height: 32.5px;">
+          <nb-icon [icon]="showPassword ? 'eye-outline' : 'eye-off-1-outline'" pack="eva" [attr.aria-label]="showPassword ? 'hide password' : 'show password'"></nb-icon>
+        </button>
+      </ion-item>
+      <span class="error ion-padding" *ngIf="isSubmitted && errorControl.password.errors?.required">
+        <span class="required-asterisk">*</span> <span class="error-text">Password is required.</span>
+      </span>
+    </div>
+    
 <div align="center">
 <ion-row>
 <ion-col>
-<ion-button expand="block" class="main-button col-8" (click)="signIn()"> Verify</ion-button>
+<ion-button expand="block" class="main-button col-8" (click)="signIn()"> VERIFY</ion-button>
 </ion-col>
 </ion-row>
 <br />
@@ -55,10 +54,10 @@ Phone Number number is required.
 </form>
 </div>
 
-<div>
+<!-- <div>
 <div align="center">
 <img src="../../../assets/Siri Images/VKF3.png" class="image2"><br />
 </div>
-</div>
+</div> -->
 </div>
 </ion-content>

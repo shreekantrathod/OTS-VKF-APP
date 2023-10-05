@@ -1,0 +1,17 @@
+
+
+.base-icons{
+  margin-right: -100px; /* Adjust the right margin as needed */
+}
+.myTabs {
+  --background: rgb(240, 255, 255)
+}
+
+
+.tab-selected {
+  --background: skyblue;
+}
+ion-tab-button{
+  --padding-start: 0px;
+  --padding-end: 0px;
+}

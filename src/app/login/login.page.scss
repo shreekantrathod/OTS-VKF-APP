@@ -13,12 +13,12 @@
 .center-text{
     margin-top: 30px; 
     font-weight: 900;
-    color:rgb(18, 18, 125);
+    color:rgb(255, 115, 0);
     text-align: center;  
 }
 
 .labelstyle{
-    // color: black;
+    color:rgb(18, 18, 125);
     margin-left: 5%;
     font-size: medium;
 }
@@ -104,6 +104,30 @@ ion-button {
     text-decoration: solid;
     
 }
+.button-container {
+    display: flex;
+    justify-content: center; /* Horizontally center-align the button */
+  }
+  
 .main-button {
-margin-top: 5px; 
+    --background: rgb(18, 18, 125);
+  color: white;
+  font-weight: 500;
+  width:6rem;
 }
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Horizontally center-align the button */
+  }
+  .error-text {
+    color: red; /* Text color in red */
+    font-weight: normal; /* Normal font weight */
+  }
+  
+  .required-asterisk {
+    color: red; /* Color for asterisk */
+    font-weight: normal; /* Normal font weight */
+    margin-right: 2px; /* Add some spacing between the asterisk and the text */
+  }
+  

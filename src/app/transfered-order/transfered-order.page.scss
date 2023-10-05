@@ -39,14 +39,6 @@ ion-tab-button {
   
   
   
-  .tab {
-    --background: rgb(18, 18, 125);
-    margin-left: 4rem !important;
-    color: white;
-    font-weight: 900;
-    width:10rem;
-  }
-  
   .power{
     width: 40px;
     height: 40px;
@@ -88,7 +80,7 @@ ion-tab-button {
   }
   
   .search {
-    width: 15rem;
+    width: 30rem;
     position: relative; /* Create a positioning context for pseudo-element */
   }
   
@@ -114,7 +106,7 @@ ion-tab-button {
     z-index: -1;
   }
   .title{
-    color:rgb(255, 115, 0);
+    color:rgb(18, 18, 125);
     font-weight: 700;
   }
   .day{
@@ -133,19 +125,9 @@ ion-tab-button {
   }
   .button-container {
     display: flex; 
-  
+
   }
   
-  .tab {
-    width:13rem; 
-    height: 1.5rem;
-    
-  }
-  .tab1 {
-    width:13rem; 
-    height: 1.5rem;
-    margin-left: -30px;
-  }
   
   .search {
     --border-radius: 20px; 
@@ -182,6 +164,30 @@ ion-tab-button {
   
   .segment-button-checked ::ng-deep{
     background-color: #bfdffa;
+  }
+  
+  .tab {
+    --background: rgb(18, 18, 125);
+    margin-left: 4rem !important;
+    color: white;
+    font-weight: 500;
+    width:6rem;
+  }
+  
+  .custom-button {
+    width: 35px;
+    height: 35px;
+     border: 4px solid rgb(18, 18, 125);/* Adjust the border thickness as needed */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 4rem !important;
+  }
+  
+  .power-icon {
+    color: rgb(18, 18, 125);
+    font-size: 1.2rem; /* Adjust the icon size as needed */
   }
   
   
